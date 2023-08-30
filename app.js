@@ -30,3 +30,4 @@ console.log(divide(2,10));
 
 
 
+divide
