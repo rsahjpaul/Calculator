@@ -1,33 +1,42 @@
-let firstNumber = ''
-let operator = ''
-let secondNumber = ''
-
+//MAIN OPERATORS
 
 let add = (a, b) => {
   return a + b;
 };
 
-let subtract = (a, b) => {
-  return a - b;
+let subtract = (x, y) => {
+  return x - y;
 };
 
-let multiply = (a, b) => {
-  return a * b;
+let multiply = (x, y) => {
+  return x * y;
 };
 
-let divide = (a, b) => {
-  return a / b;
+let divide = (x, y) => {
+  if (y === 0) {
+    return "undefined";
+  }
+  return x / y;
 };
 
-console.log(add(2,10));
+let firstNumber = '';
+let secondNumber = '';
+let operator = "+";
 
-console.log(subtract(2,10));
+let operate = (operator, firstNumber, secondNumber) => {
+  if (operator === "+") {
+    return add(firstNumber, secondNumber);
+  } else if (operator === "-") {
+    return subtract(firstNumber, secondNumber);
+  } else if (operator === "*") {
+    return multiply(firstNumber, secondNumber);
+  } else if (operator === "/") {
+    return divide(firstNumber, secondNumber);
+  }
+};
 
-console.log(multiply(2,10));
+let calculate = document.getElementById("equals");
+calculate.addEventListener("click", () => {
+  console.log(operate(operator, firstNumber, secondNumber));
+});
 
-console.log(divide(2,10));
-
-
-
-
-divide

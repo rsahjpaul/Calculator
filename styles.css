@@ -1,4 +1,13 @@
-* {
-    background-color: black;
+body {
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+}
 
+.calculator {
+  background-color: #001f3f;
+  width: 40vh;
+  height: 60vh;
+  margin-top: 20vh;
+  border-radius: 12px;
 }
