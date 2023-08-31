@@ -11,3 +11,55 @@ body {
   margin-top: 20vh;
   border-radius: 12px;
 }
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10vh; /* Adjust as needed */
+
+}
+
+
+.numeric-buttons,
+.operations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Change to row */
+    justify-content: space-between; /* Add this line */
+  }
+
+.operations {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3);
+
+  background: transparent;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.screen {
+  background-color: grey;
+  height: 55px;
+  margin: 10px;
+  border-radius: 5px;
+}
