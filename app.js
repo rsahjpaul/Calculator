@@ -137,18 +137,20 @@ minusButton.addEventListener("click", () => {
 let multiplyButton = document.getElementById("multiply");
 
 multiplyButton.addEventListener("click", () => {
+
+  screenDisplay.textContent = operate(operator, firstNumber, secondNumber);
+
   if (firstNumber === 0) {
     firstNumber = parseFloat(screenDisplay.textContent);
     screenDisplay.textContent += "*";
     operator = "*";
   } else if (firstNumber !== 0 && secondNumber !== 0) {
-    firstNumber = firstNumber * secondNumber;
-    secondNumber = 0;
+    firstNumber = parseFloat(screenDisplay.textContent);
     operator = "*";
     screenDisplay.textContent += "*";
   } else if (firstNumber !== 0) {
     secondNumber = 0;
-    operator = "-";
+    operator = "*";
     screenDisplay.textContent += "*";
   }
 
@@ -156,23 +158,26 @@ multiplyButton.addEventListener("click", () => {
 
   console.log("First Number: " + firstNumber);
   console.log("Second Number: " + secondNumber);
+  console.log("Operator: " + operator);
 });
 
 let divideButton = document.getElementById("divide");
 
 divideButton.addEventListener("click", () => {
+
+  screenDisplay.textContent = operate(operator, firstNumber, secondNumber);
+
   if (firstNumber === 0) {
     firstNumber = parseFloat(screenDisplay.textContent);
     screenDisplay.textContent += "/";
     operator = "/";
   } else if (firstNumber !== 0 && secondNumber !== 0) {
     firstNumber = firstNumber / secondNumber;
-    secondNumber = 0;
     operator = "/";
     screenDisplay.textContent += "/";
   } else if (firstNumber !== 0) {
     secondNumber = 0;
-    operator = "-";
+    operator = "/";
     screenDisplay.textContent += "/";
   }
 
@@ -180,6 +185,7 @@ divideButton.addEventListener("click", () => {
 
   console.log("First Number: " + firstNumber);
   console.log("Second Number: " + secondNumber);
+  console.log("Operator: " + operator);
 });
 
 let equalsButton = document.getElementById("equals");
