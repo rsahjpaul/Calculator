@@ -17,6 +17,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 10vh; /* Adjust as needed */
+  
 
 }
 
@@ -55,11 +56,21 @@ button {
   color: white;
   cursor: pointer;
   margin: 10px;
+  transition: transform 0.1s ease-in-out;
+
 }
+
+
+button:active {
+  transform: scale(0.95);
+}
+
 
 .screen {
   background-color: grey;
-  height: 55px;
+  height: 60px;
   margin: 10px;
   border-radius: 5px;
+  font-family: 'Calculator', sans-serif;
+  font-size: 45px;
 }
