@@ -113,21 +113,25 @@ let minusButton = document.getElementById("minus");
 minusButton.addEventListener("click", () => {
   screenDisplay.textContent = operate(operator, firstNumber, secondNumber);
 
-  if (firstNumber === 0) {
+  if (screenDisplay.textContent !== "") {
     firstNumber = parseFloat(screenDisplay.textContent);
-    screenDisplay.textContent += "-";
-    operator = "-";
-  } else if (firstNumber !== 0 && secondNumber !== 0) {
-    firstNumber = parseFloat(screenDisplay.textContent);
-    operator = "-";
-    screenDisplay.textContent += "-";
-  } else if (firstNumber !== 0) {
-    secondNumber = 0;
-    operator = "-";
-    screenDisplay.textContent += "-";
-  }
 
-  screenDisplay.textContent = "";
+    if (firstNumber === 0) {
+      firstNumber = parseFloat(screenDisplay.textContent);
+      screenDisplay.textContent += "-";
+      operator = "-";
+    } else if (firstNumber !== 0 && secondNumber !== 0) {
+      firstNumber = parseFloat(screenDisplay.textContent);
+      operator = "-";
+      screenDisplay.textContent += "-";
+    } else if (firstNumber !== 0) {
+      secondNumber = 0;
+      operator = "-";
+      screenDisplay.textContent += "-";
+    }
+
+    screenDisplay.textContent = "";
+  }
 
   console.log("First Number: " + firstNumber);
   console.log("Second Number: " + secondNumber);
@@ -137,7 +141,6 @@ minusButton.addEventListener("click", () => {
 let multiplyButton = document.getElementById("multiply");
 
 multiplyButton.addEventListener("click", () => {
-
   screenDisplay.textContent = operate(operator, firstNumber, secondNumber);
 
   if (firstNumber === 0) {
@@ -164,7 +167,6 @@ multiplyButton.addEventListener("click", () => {
 let divideButton = document.getElementById("divide");
 
 divideButton.addEventListener("click", () => {
-
   screenDisplay.textContent = operate(operator, firstNumber, secondNumber);
 
   if (firstNumber === 0) {
